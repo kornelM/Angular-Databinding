@@ -12,8 +12,9 @@ import {PropertyBindingComponent} from "./property-binding.component"
       <br>
       <br>
       <section class="child">
-        <my-property-binding  [myName]="name" [myAge]="34"></my-property-binding>
+        <my-property-binding  [myName]="name" [myAge]="34" (hobbiesChanged)="hobbies = $event"></my-property-binding>
       </section>
+      <p>My hobbies are: {{hobbies}}</p>
     </section>
   `,
   styleUrls: ['app.component.scss'],
@@ -21,5 +22,6 @@ import {PropertyBindingComponent} from "./property-binding.component"
 })
 export class AppComponent {
   name: String = '';
+  hobbies: String = '';
 
 }
