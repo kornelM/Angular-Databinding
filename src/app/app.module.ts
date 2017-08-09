@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import { AppComponent } from './dev/app.component';
+import {AppComponent} from './dev/app.component';
+import {PropertyBindingComponent} from "./dev/property-binding.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
