@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    {{onTest()}}
+    <input type="text" [value]="name" [ngClass] ="'red'"  (keyup)="onKeyup(inputElement.value)"  #inputElement> <br>
+    <p>{{values}}</p>
+  `,
+  styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  name = 'Kornel';
+  values = '';
+
+  onTest() {
+    return 1 === 1;
+  }
+  onKeyup (value: String) {
+    this.values += value + ' | ';
+  }
 }
